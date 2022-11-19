@@ -1,4 +1,5 @@
 DURHACK 2022
 
 
-TEAM: 
+TEAM: Alicia, Isi, Hannah, Josh, Andy 
+
