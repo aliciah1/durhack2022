@@ -1,0 +1,86 @@
+Within the 6 datasets analysed, these are the findings and how they can relate to the game
+
+Subset used : 18th of November 2022 
+
+
+C02 DATA [Subset used : 18th of November 2022 9:09AM to 9:09PM]:
+  -Maximum value was 474 at 3:24pm
+  -Minimum was 0 at 9:09am
+  -mean was 219   [the value should flucutuate here for a while]
+  This can correlate to the amount of people in the building and so the difficulty of the game at that point, i.e. at 3:24 there are the most people in the building 
+  and so the most amount of appliances are being turned on etc.
+  
+
+HUMUDITY DATA [subset used : 18th of November 2022 9:08AM to 9:08PM]:
+  -Max 43.68 at 11:28AM
+  -Min 38.17 at 6:28PM
+  -Mean is 40.65
+  This will correlate to how many windows open, so the chances of windows opening should be highest between 11-1pm lets say and should be practically be 0 after 6:30
+  other than that the value should hover around 40.65 so there should constantly be a window opening to be closed
+  So all windows open == 43.68 (higher humidity as alot of people so)
+  No windows open == 38.17 (i.e. all windows are closed and everyone is more or less gone home)
+  
+  
+LIGHTS DATA [subset used : 18th of November 2022 9:04AM to 9:04PM]:
+  -Max 2252.16 at 9:19AM so the max amount of lights are in at this time
+  -Min is 7.99 at 8:34pm so basically everyone has left and all lights are off
+
+
+Motion data [subset used : 9:12AM to 8:31PM]:
+  The motion is highest at the start and end of every hour so increase activity at the start of each hour, so at the start of each hour, lets say a bunch of PC's in a 
+  select number of rooms should all turn on and at the end of that hour, they should all be turned off
+
+OPEN/CLOSE DATA [subset used : 9:23AM to 9:13PM]:
+  -Not really sure how to use this data within the game so this will be passed within the game as Im not sure how to implement it
+ 
+VIBRATIONS DATA [subset used : 7:50AM to 7:50PM]:
+  Max : appears at 4pm and 6pm for some reason
+  Min : several values as this data is between 0 and 1
+  so maybe at 4 and 6pm maybe turn on several appliances like kettles and lights 
+
+
+Computer Monitor : Will be turned on at the start of hours between 9 - 6, when a computer is on +1 to energy every 5 seconds, after an hour has passed the computer 
+                   is able to be turned off as the user is done with it
+                   
+
+Window : Windows should open randomly, but if people arent in a room when they are open they need to be closed, windows open will cost +1 energy for every 5 seconds
+         if a window is open AND a radiator is on +2 energy 
+
+Empty plug socket : if a plug socket is on and being used +1 energy for every 10 seconds, if not being needs to be turned off
+
+
+radiator : if a radiator is on +1 energy for every 5 seconds
+
+taps  : for 3 seconds a tap is running +1 energy
+
+kettle : Kettles will be on for a max of 5 minutes before being turned off automatically, Kettles only need to boil for 30 seconds before being fine, so turn off 
+         after 30 seconds, they cost +1 energy for every 5 seconds [so have a max 60 energy points penalty if missed]
+
+Light Switch : Every 5 seconds a light switch is on +1 to the energy, light switches should be turned off as soon as no one is in the room.
+
+
+Objects to be interacted with will have a red exclamation symbol 
+  
+  
+Different meters to be displayed
+    1) Time
+    2) Energy 
+    3) Humidiy 
+          -all windows closed == 43.68 (and thats good)
+          -all windows open == 38.17 (and thats bad)
+          -there are 3 windows on floor 1 and floor 2 and it goes as following
+              -6 windows open == 38.17
+              -5 window open== 39.09
+              -4 windows open == 40.01
+              -3 windows open == 40.93
+              -2 windows open == 41.85
+              -1 window open == 42.77
+              -0 windows open == 43.68
+    4) C02 Levels
+          -should gradually rise from 0 to 474 and then go back down to 0, C02 rising shows more people are in the building and so more ugrency to run around and 
+            check for points of interest
+    5) Light Levels 
+          -all lights are on == 2252.16
+          -all lights off == 7.99
+          -the mean is 579.09 so maybe each light turned on could add like 500 to the light level and each computer on can add 80.
+ 
